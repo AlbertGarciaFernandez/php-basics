@@ -1,40 +1,35 @@
-<?php
-$array = array(1, 2, 3, 4);
-foreach ($array as &$valor) {
-    $valor = $valor * 2;
-}
-// $array ahora es array(2, 4, 6, 8)
-unset($valor); // rompe la referencia con el último elemento
-?>
+<!DOCTYPE html>
+<html>
+<body>
 
 <?php
-/* ejemplo 1 */
-
-for ($i = 1; $i <= 10; $i++) {
-    echo $i;
+// use for 
+for ($x = 0; $x <= 100; $x++) {
+    echo "The number is: $x <br>";
 }
 
-/* ejemplo 2 */
+// foreach
+$fruits = array("mango", "kiwi", "coconut", "orange");
 
-for ($i = 1; ; $i++) {
-    if ($i > 10) {
-        break;
+foreach ($fruits as $value) {
+    echo "$value <br>";
+}
+
+//while
+
+while($i<6){
+        echo "<p>The number is $i,</p>";
+        $i++;
     }
-    echo $i;
-}
 
-/* ejemplo 3 */
+// do while loop
+$y = 1;
 
-$i = 1;
-for (; ; ) {
-    if ($i > 10) {
-        break;
-    }
-    echo $i;
-    $i++;
-}
+do {
+    echo "The number is: $y <br>";
+$y++;
+} while ($y <= 5);
+?> 
 
-/* ejemplo 4 */
-
-for ($i = 1, $j = 0; $i <= 10; $j += $i, print $i , $i++);
-?>
+</body>
+</html>
